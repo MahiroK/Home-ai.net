@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home-ai.net</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      Home-ai.net
+      <p class="tagline">『"よかった"を分かち合う、明日につなげる』</p>
+    </header>
+
+    <!-- 投稿フォーム -->
+    <div class="post-form">
+      <input id="emoji" placeholder="絵文字を入力" />
+      <input id="username" placeholder="ユーザー名" />
+      <input id="content" placeholder="いまなにしてる？" />
+      <select id="category">
+        <option>日常</option>
+        <option>聞いてほしい話</option>
+        <option>困ってること</option>
+        <option>おすすめ商品</option>
+      </select>
+      <button onclick="addPost()">投稿</button>
+    </div>
+
+    <!-- フィルターボタン -->
+    <div class="filter-buttons">
+      <button onclick="filterPosts('all')">すべて</button>
+      <button onclick="filterPosts('日常')">日常</button>
+      <button onclick="filterPosts('聞いてほしい話')">聞いてほしい話</button>
+      <button onclick="filterPosts('困ってること')">困ってること</button>
+      <button onclick="filterPosts('おすすめ商品')">おすすめ商品</button>
+    </div>
+
+    <!-- 投稿一覧 -->
+    <div id="postList"></div>
+
+    <footer>
+      <p>&copy; Mahiro</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
